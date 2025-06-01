@@ -1,0 +1,13 @@
+{
+    "names": {
+        "uwb_tracking_ros2": { "symlink-install": true },
+        "vectornav": { "symlink-install": false },
+        "vectornav_msgs": { "symlink-install": false },
+        "citrack_ros_msgs": { "symlink-install": true },
+        "ekf_fusion": {
+            "symlink-install": true,
+            "type": "ros.ament_python"
+        }
+    }
+}
+
