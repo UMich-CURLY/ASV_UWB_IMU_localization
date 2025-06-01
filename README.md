@@ -5,28 +5,28 @@ This repo is intended to combine UWB (Ultrawide-band) based 3d position estimate
 
 ## To build (after cloning):
 
-colcon build --symlink-install
+colcon build --symlink-install <br>
 source install/setup.bash
 
 ## To launch:
 
 ### Publish transforms
-cd src
+cd src <br>
 python tf_pub.py
 
 ### Launch UWB
 ros2 run uwb_tracking_ros2 uwb_tracking_dwm1001
 
 ### Launch IMU 
-sudo chmod -R 777 /dev/ttyUSB0 (it's needed atleast for the VN-100T)
+sudo chmod -R 777 /dev/ttyUSB0 (it's needed atleast for the VN-100T) <br>
 ros2 launch vectornav vectornav.launch.py
 
 ### Combine the UWB with IMU
 
-- If velocity is also needed in addition to pose:
-python odom_fusion_orient.py
+- If velocity is also needed in addition to pose:<br>
+python odom_fusion_orient.py <br>
 
-or 
+or <br>
 
-- If just pose is needed (not velocity):
+- If just pose is needed (not velocity):<br>
 python pose_fusion.py
